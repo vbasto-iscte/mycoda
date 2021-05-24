@@ -1,0 +1,299 @@
+<form>
+<hr><br>
+	<label for="problem_name">Insert a new scheduling problem name: <input type="text" id="name" name="problem_name"></label> or 
+	<button type="submit">Open a previously saved scheduling problem</button><br><br>
+	Your problem data will be saved in <i>problem_name.owl</i> file. You can import and reuse it later.<br><br><hr>
+Please fill in the following sections one by one according to their order number.
+<hr><br>
+<!-- ------------------------------------------------------ -->
+<!-- ------------------------------------------------------ -->
+	<center><b>1. Problem</b></center><br>
+	Problem property:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Properties com SchedulingProblem no dominio</option>
+		<option>isFlowShopProblem</option>
+		<option>isJobShopProblem</option>
+		<option>hasNumberOfMachines</option>
+		<option>...</option>
+	</select>
+	Value:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Range da property escolhida</option>
+		<option>true</option>
+		<option>false</option>
+		<option>(inteiro a preencher pelo utilizador)</option>		
+	</select><br><br>
+	<button type="submit">Add problem property</button>
+	<button type="submit">Remove problem property</button>
+	<button type="submit">Save problem configuration</button><p></p>
+    <table border = "1">
+		<tr>
+			<th>Problem Property</th>
+            <th>Value</th>
+         </tr>
+         <tr>
+            <td>isFlowShopProblem</td>
+            <td>true</td>
+         </tr>
+         <tr>
+            <td>hasNumberOfMachines</td>
+            <td>3</td>
+         </tr>
+      </table>      
+	<br><hr>
+<!-- ------------------------------------------------------ -->
+<!-- ------------------------------------------------------ -->
+	<center><b>2. Machin(es)</b></center><br>
+	Machine(s) property:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Properties com Machine no dominio</option>
+		<option>hasBreakdownTimeInSeconds</option>
+		<option>hasBatchProcessing</option>
+		<option>...</option>
+	</select>
+	Value:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Range da property escolhida</option>
+		<option>(inteiro a preencher pelo utilizador)</option>
+	</select><br><br>
+	<button type="submit">Add machine property</button>
+	<button type="submit">Remove machine property</button>
+	<button type="submit">Save machines configuration</button><p></p>	
+    <table border = "1">
+		<tr>
+			<th>Machine Id</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Value</th>
+         </tr>
+         <tr>
+            <td>1</td>
+            <td>hasBreakdownTimeInSeconds</td>
+            <td>100</td>
+            <td>hasBatchProcessing</td>
+            <td>5</td>
+         </tr>
+         <tr>
+            <td>2</td>
+            <td>hasBreakdownTimeInSeconds</td>
+            <td>10</td>
+            <td>hasBatchProcessing</td>
+            <td>2</td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td>hasBreakdownTimeInSeconds</td>
+            <td>0</td>
+            <td>hasBatchProcessing</td>
+            <td>1</td>
+         </tr>
+      </table><br><hr>
+<!-- ------------------------------------------------------ -->
+<!-- ------------------------------------------------------ -->
+	<center><b>3. Order</b></center><br>
+	Order property:	
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Properties com Order no dominio</option>
+		<option>hasAllJobsIdentical</option>
+		<option>hasJobFamilies</option>
+		<option>hasNumberOfJobs</option>
+		<option>hasJobPrecedenceConstraints</option>
+		<option>...</option>
+	</select>
+	Value:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Range da property escolhida</option>
+		<option>true</option>
+		<option>false</option>
+		<option>(inteiro a preencher pelo utilizador)</option>
+	</select><br><br>
+	<button type="submit">Add order property</button>
+	<button type="submit">Remove order property</button>
+	<button type="submit">Save order configuration</button><p></p>
+    <table border = "1">
+		<tr>
+			<th>Order Property</th>
+            <th>Value</th>
+         </tr>
+         <tr>
+            <td>hasAllJobsIdentical</td>
+            <td>true</td>
+         </tr>
+         <tr>
+            <td>hasJobFamilies</td>
+            <td>2</td>
+         </tr>
+         <tr>
+            <td>hasNumberOfJobs</td>
+            <td>4</td>
+         </tr>
+         <tr>
+            <td>hasJobPrecedenceConstraints</td>
+            <td>true</td>
+         </tr>         
+      </table>      
+	<br><hr>
+<!-- ------------------------------------------------------ -->
+<!-- ------------------------------------------------------ -->
+	<center><b>4. Job(s)</b></center><br>
+	Job property:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Properties com Job no dominio"</option>
+		<option>hasNumberOfTasks</option>
+		<option>hasNoWaitConstraints</option>
+		<option>belongsToJobFamily</option>
+		<option>precedesJob</option>
+		<option>...</option>
+	</select>	
+	Value:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Range da property escolhida</option>
+		<option>(inteiro a preencher pelo utilizador)</option>		
+		<option>true</option>
+		<option>false</option>
+		<option>(individuos da classe JobFamily)</option>
+		<option>(individuos da classe Job)</option>
+	</select><br><br>
+	<button type="submit">Add job property</button>
+	<button type="submit">Remove job property</button>
+	<button type="submit">Save jobs configuration</button><p></p>
+<small><i>If JobFamilies exist, it is assumed that all jobs of the same family have similar properties.</i></small>	
+    <table border = "1">
+		<tr>
+			<th>Job Id</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Value</th>          
+         </tr>
+        <tr>
+            <td>1</td>
+            <td>hasNumberOfTasks</td>
+            <td>1</td>       
+            <td>hasNoWaitConstraints</td>
+            <td>true</td>
+            <td>belongsToJobFamily</td>
+            <td>1</td>
+            <td>precedesJob</td>
+            <td>3</td>
+         </tr>
+         <tr>
+            <td>2</td>
+            <td>hasNumberOfTasks</td>
+            <td>2</td>       
+            <td>hasNoWaitConstraints</td>
+            <td>false</td>
+            <td>belongsToJobFamily</td>
+            <td>2</td>
+            <td>precedesJob</td>
+            <td>3</td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td>hasNumberOfTasks</td>
+            <td>2</td>       
+            <td>hasNoWaitConstraints</td>
+            <td>false</td>
+            <td>belongsToJobFamily</td>
+            <td>2</td>
+         </tr>
+         <tr>
+            <td>4</td>
+            <td>hasNumberOfTasks</td>
+            <td>2</td>                   
+            <td>hasNoWaitConstraints</td>
+            <td>false</td>
+            <td>belongsToJobFamily</td>
+            <td>2</td>
+            <td>precedesJob</td>
+            <td>3</td>
+         </tr>
+      </table>
+	  <br><hr>
+<!-- ------------------------------------------------------ -->
+<!-- ------------------------------------------------------ -->
+	<center><b>5. Task(s)</b></center><br>
+	Job property:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Properties com Task no dominio</option>
+		<option>hasProcessingTimeInSeconds</option>
+		<option>belongsToJob</option>
+		<option>precedesTask</option>
+		<option>...</option>
+	</select>
+	Value:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Range da property escolhida</option>
+		<option>(inteiro a preencher pelo utilizador)</option>		
+		<option>true</option>
+		<option>false</option>
+		<option>(individuos da classe Job)</option>
+		<option>(individuos da classe Task)</option>
+	</select><br><br>
+	<button type="submit">Add task property</button>
+	<button type="submit">Remove task property</button>
+	<button type="submit">Save tasks configuration</button><p></p>
+    <table border = "1">
+		<tr>
+			<th>Task Id</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Value</th>
+         </tr>
+        <tr>
+            <td>1</td>
+            <td>hasProcessingTimeInSeconds</td>
+            <td>3</td>
+            <td>belongsToJob</td>
+            <td>1</td>
+         </tr>
+         <tr>
+            <td>2</td>
+            <td>hasProcessingTimeInSeconds</td>
+            <td>4</td>
+            <td>belongsToJob</td>
+            <td>1</td>
+            <td>preceedsTask</td>
+            <td>1</td>            
+         <tr>
+            <td>3</td>
+            <td>hasProcessingTimeInSeconds</td>
+            <td>5</td>
+            <td>belongsToJob</td>
+            <td>2</td>
+      </table>      
+	  <br><hr>
+<!-- ------------------------------------------------------ -->
+<!-- ------------------------------------------------------ -->
+	<center><b>6. Objective Function(s)</b></center><br>
+	Objective function:
+	<select name=” optionlist ” onChange=”combo(this, ’demo’)”>
+		<option>Individuos da classe ObjectiveFunction"</option>
+		<option>makespan</option>
+		<option>totalWeightedCompletionTime</option>
+		<option>...</option>
+	</select><br><br>
+	<button type="submit">Add objective function</button>
+	<button type="submit">Remove objective function</button>
+	<button type="submit">Save objective functions configuration</button><p></p>
+    <table border = "1">
+		<tr>
+			<th>Objective Function</th>
+         </tr>
+         <tr>
+            <td>makespan</td>
+         <tr>
+        <tr>
+            <td>totalWeightedCompletionTime</td>
+        </tr>
+      </table>      
+	  <br><hr>
+</form>
